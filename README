@@ -1,0 +1,70 @@
+Requirement
+-----------
+Travel from point A to B via serveal stops by set of random cards.
+
+Input
+-----
+	- From
+	- To
+	- Transportation type
+	- Transportation number(Optiona)
+	- Seat number
+	- Gate number
+	- Baggage number
+
+
+Goal
+----
+Write API that sort cards and return description of full journey.
+
+
+How to execute code
+-------------------
+Pull project git clone RRPO_NAME
+Run index.php file
+
+Extend code
+-----------
+- By defined a sperated class for each transportation method that contain it's information
+
+Test
+-----
+[
+	[
+	'fromLocation' 			=> 'Barcelona',
+	'toLocation' 			=> 'Gerona',
+	'transportationType' 	=> 'Airport bus'
+	],
+	[
+	'fromLocation' 			=> 'Madrid',
+	'toLocation' 			=> 'Barcelona',
+	'transportationType' 	=> 'Train',
+	'seatNumber' 			=> '45B'
+	],
+	[
+	'fromLocation' 			=> 'Stockholm',
+	'toLocation' 			=> 'New York JFK',
+	'transportationType' 	=> 'Flight',
+	'transportationNumber' 	=> 'SK22',
+	'seatNumber' 			=> '7B', 
+	'gateNumber' 			=> '22', 
+	'baggageNumber' 		=> 'will we automatically transferred from your last leg', 
+	],
+	[
+	'fromLocation' 			=> 'Gerona',
+	'toLocation' 			=> 'Stockholm',
+	'transportationType' 	=> 'Flight',
+	'transportationNumber' 	=> 'SK455',
+	'seatNumber' 			=> '3A', 
+	'gateNumber' 			=> '45B', 
+	'baggageNumber' 		=> 'drop at ticket counter 344', 
+	]
+];
+
+Should produce
+--------------
+1. From Madrid, take Train to Barcelona . Sit in seat 45B.
+2. From Barcelona, take Airport bus to Gerona No seat assignment.
+3. From Gerona, take Flight SK455 to Stockholm . Gate 45B. Sit in seat 3A. Baggage drop at ticket counter 344
+4. From Stockholm, take Flight SK22 to New York JFK . Gate 22. Sit in seat 7B. Baggage will we automatically transferred from your last leg
+5. You have arrived at your final destination.
