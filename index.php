@@ -1,12 +1,18 @@
 <?php
 
+
+/**
+ * Turn on error reporting.
+ */
+error_reporting(E_ALL);
+
 require_once('Journey.class.php');
 
 $cards = [
 	[
 	'fromLocation' 			=> 'Barcelona',
 	'toLocation' 			=> 'Gerona',
-	'transportationType' 	=> 'Airport bus'
+	'transportationType' 	=> 'AirportBus'
 	],
 	[
 	'fromLocation' 			=> 'Madrid',
